@@ -246,6 +246,8 @@ class FolderAdmin(PrimitivePermissionAwareModelAdmin):
     def directory_listing(self, request, folder_id=None, viewtype=None):   
         request.session['filer_last_folder_id'] = folder_id
         folder = self._get_listing_folder(request, folder_id, viewtype)
+        if isinstance(folder, HttpResponse):
+            return folder
         # Check actions to see if any are available on this changelist
         actions = self.get_actions(request)
 
