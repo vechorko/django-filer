@@ -50,16 +50,16 @@ Add ``"filer"``, ``"mptt"`` and ``"easy_thumbnails"`` to your project's ``INSTAL
 
 See the docs for advanced configuration:
 
-  * `subject location docs`_
-  * `permission docs`_ (experimental)
-  * `secure file downloads docs`_ (experimental)
+* `subject location docs`_
+* `permission docs`_ (experimental)
+* `secure file downloads docs`_ (experimental)
 
 Django 1.7
 ----------
 
 Django 1.7 is supported together with the new migrations.
 To avoid disrupting user experience the new migrations are installed in `filer.migrations_django`.
-If you are going to deploy `filer` in a Django 1.7 project you are required to add the following configuration:
+If you are going to deploy `filer` in a Django 1.7 project you are required to add the following configuration::
 
     MIGRATION_MODULES = {
             'filer': 'filer.migrations_django',
